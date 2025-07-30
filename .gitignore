@@ -1,0 +1,21 @@
+# ESP-IDF build output
+/build/
+sdkconfig
+sdkconfig.old
+
+# VS Code project files
+.vscode/
+*.code-workspace
+
+# Dev container configs (optional)
+.devcontainer/
+
+# CMake output
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Python cache
+__pycache__/
+*.pyc

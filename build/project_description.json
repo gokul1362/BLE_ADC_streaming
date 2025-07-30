@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "bluedroid_gatt_server",
-    "project_version":    "1",
+    "project_version":    "0b6900b-dirty",
     "project_path":       "C:/Users/gokul/esp/espressif-idf_projects/adc_stream",
     "idf_path":           "C:/Users/gokul/esp/v5.5/esp-idf",
     "build_dir":          "C:/Users/gokul/esp/espressif-idf_projects/adc_stream/build",
