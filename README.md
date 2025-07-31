@@ -56,6 +56,7 @@ BLE_ADC_Stream/
 # Set up your ESP32 target (once)
 idf.py set-target esp32c6
 
+#set flash method to UART
 # Build
 idf.py build
 
