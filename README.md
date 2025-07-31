@@ -21,6 +21,7 @@ This is an ESP-IDF project that uses an ESP32 to sample an analog input (ADC) ev
 
 ## 📁 Project Structure
 
+BLE_ADC_Stream/
 ├── main/
 │ ├── main.c # Core logic: BLE + ADC sampling
 │ └── CMakeLists.txt
@@ -52,6 +53,23 @@ idf.py menuconfig
 idf.py build
 
 # Flash and monitor
-idf.py -p PORT flash # to Flash
+idf.py -p PORT flash 
 
-idf.py -p PORT flash # to see the output
+idf.py -p PORT monitor 
+
+## 📲 How to See the Results
+
+Once your ESP32 is flashed and powered, it begins advertising as `BLE_Sampler`. You can view the streamed ADC values using a BLE-enabled mobile app. Since I had trouble with the MIT app inventor, I could not make an APP, but the firmware can be verified through nRF connect.
+
+---
+
+### ✅ Option 1: Using nRF Connect 
+
+1. **Install** the [nRF Connect app](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) (Android/iOS).
+2. **Open the app** and start scanning.
+3. **Find and connect to** the device named `BLE_Sampler`.
+4. Expand the **service `0x00FF`**, then find the **characteristic `0xFF01`**.
+5. Tap the **“Enable notifications”** button (bell or 3-arrow icon).
+6. You’ll start seeing **notifications every second**, showing 20 bytes in hex (10 ADC samples as `uint16_t` values).
+
+
